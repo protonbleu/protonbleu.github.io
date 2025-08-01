@@ -13,6 +13,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
+                <img src="images/icon-192.png" alt="Modulist Logo" class="nav-logo-img round">
                 <h2>Modulist</h2>
             </div>
             <div class="nav-links">
@@ -35,8 +36,50 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="phone-mockup">
-                    <img src="images/activity_checklist.png" alt="Modulist Activity Checklist" class="app-screenshot">
+                <div class="carousel-outer-container">
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
+                            <div class="carousel-slide active">
+                                <div class="phone-mockup">
+                                    <img src="images/activities.png" alt="Activities List" class="app-screenshot">
+                                </div>
+                                <p class="slide-caption">Activities Overview</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="phone-mockup">
+                                    <img src="images/activity_checklist.png" alt="Activity Checklists" class="app-screenshot">
+                                </div>
+                                <p class="slide-caption">Activity Checklists</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="phone-mockup">
+                                    <img src="images/activity_details.png" alt="Activity Details" class="app-screenshot">
+                                </div>
+                                <p class="slide-caption">Activity Details</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="phone-mockup">
+                                    <img src="images/lists.png" alt="Lists Management" class="app-screenshot">
+                                </div>
+                                <p class="slide-caption">Lists Management</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="phone-mockup">
+                                    <img src="images/list_items.png" alt="List Details" class="app-screenshot">
+                                </div>
+                                <p class="slide-caption">List Details</p>
+                            </div>
+                        </div>
+                        <div class="carousel-dots">
+                            <span class="dot active" data-slide="0"></span>
+                            <span class="dot" data-slide="1"></span>
+                            <span class="dot" data-slide="2"></span>
+                            <span class="dot" data-slide="3"></span>
+                            <span class="dot" data-slide="4"></span>
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" aria-label="Previous slide">‹</button>
+                    <button class="carousel-btn next" aria-label="Next slide">›</button>
                 </div>
             </div>
         </div>
@@ -61,33 +104,6 @@
                     <div class="feature-icon">✨</div>
                     <h3>Clean Interface</h3>
                     <p>Simple, distraction-free design that keeps you focused on what matters most.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Visuals/Screenshots Section -->
-    <section class="screenshots">
-        <div class="container">
-            <h2>See Modulist in Action</h2>
-            <div class="screenshots-grid">
-                <div class="screenshot-card">
-                    <div class="phone-mockup small">
-                        <img src="images/activities.png" alt="Activities List" class="app-screenshot">
-                    </div>
-                    <p>Activities Overview</p>
-                </div>
-                <div class="screenshot-card">
-                    <div class="phone-mockup small">
-                        <img src="images/activity_details.png" alt="Activity Details" class="app-screenshot">
-                    </div>
-                    <p>Activity Details</p>
-                </div>
-                <div class="screenshot-card">
-                    <div class="phone-mockup small">
-                        <img src="images/lists.png" alt="Lists Management" class="app-screenshot">
-                    </div>
-                    <p>Lists Management</p>
                 </div>
             </div>
         </div>
@@ -129,4 +145,4 @@
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>

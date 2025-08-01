@@ -40,6 +40,22 @@ body {
     height: 70px;
 }
 
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-logo-img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+
+.round {
+    border-radius: 50%;
+}
+
 .nav-logo h2 {
     color: #4a9eff;
     font-weight: 700;
@@ -283,20 +299,207 @@ body {
     color: #ffffff;
 }
 
-.screenshots-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
+/* FIXED CAROUSEL STYLES */
+.carousel-outer-container {
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.screenshot-card {
+.carousel-container {
+    position: relative;
+    width: 230px;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 580px;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.5s ease-in-out;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.screenshot-card p {
+.carousel-slide.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+/* Fixed carousel-specific phone mockup styles */
+.carousel-slide .phone-mockup {
+    width: 230px;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    display: block;
+    border-radius: 0;
+}
+
+.carousel-slide .app-screenshot {
+    width: 230px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.carousel-slide .app-screenshot:hover {
+    transform: scale(1.02);
+}
+
+.slide-caption {
     margin-top: 20px;
     font-weight: 500;
     color: #b8c5d6;
+    font-size: 1.1rem;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(74, 158, 255, 0.2);
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    background: rgba(74, 158, 255, 0.4);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev {
+    left: -70px;
+}
+
+.carousel-btn.next {
+    right: -70px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #4a9eff;
+    transform: scale(1.2);
+}
+
+.dot:hover {
+    background: rgba(74, 158, 255, 0.6);
+}
+
+/* Responsive adjustments for carousel */
+@media (max-width: 768px) {
+    .carousel-outer-container {
+        max-width: 280px;
+    }
+    
+    .carousel-container {
+        width: 200px;
+    }
+    
+    .carousel-slide .phone-mockup {
+        width: 200px;
+        height: 435px;
+    }
+    
+    .carousel-slide .app-screenshot {
+        width: 200px;
+        height: 435px;
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    
+    .carousel-btn.prev {
+        left: -60px;
+    }
+    
+    .carousel-btn.next {
+        right: -60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-outer-container {
+        max-width: 250px;
+    }
+    
+    .carousel-container {
+        width: 180px;
+    }
+    
+    .carousel-slide .phone-mockup {
+        width: 180px;
+        height: 390px;
+    }
+    
+    .carousel-slide .app-screenshot {
+        width: 180px;
+        height: 390px;
+    }
+    
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.3rem;
+    }
+    
+    .carousel-btn.prev {
+        left: -50px;
+    }
+    
+    .carousel-btn.next {
+        right: -50px;
+    }
 }
 
 /* About Section */
@@ -638,4 +841,4 @@ body {
     .phone-mockup.small {
         transform: scale(0.6);
     }
-} 
+}
