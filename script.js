@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const dots = carousel.querySelectorAll('.dot');
         const prevBtn = carousel.querySelector('.carousel-btn.prev');
         const nextBtn = carousel.querySelector('.carousel-btn.next');
-        
+
         let currentSlide = 0;
         let autoPlayInterval;
 
@@ -30,11 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Remove active class from all slides and dots
             slides.forEach(slide => slide.classList.remove('active'));
             dots.forEach(dot => dot.classList.remove('active'));
-            
+
             // Add active class to current slide and dot
             slides[index].classList.add('active');
             dots[index].classList.add('active');
-            
+
             currentSlide = index;
         }
 
@@ -117,10 +117,10 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const emailInput = this.querySelector('input[type="email"]');
             const email = emailInput.value;
-            
+
             if (email) {
                 // Show success message (placeholder)
-                alert('Thank you! We\'ll notify you when Modulist launches.');
+                alert('Thank you! We\'ll notify you when Repurplist launches.');
                 emailInput.value = '';
             }
         });
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (downloadBtn && downloadBtn.textContent === 'Download App') {
         downloadBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            alert('Modulist will be available soon! Stay tuned for updates.');
+            alert('Repurplist will be available soon! Stay tuned for updates.');
         });
     }
 
